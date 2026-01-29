@@ -640,6 +640,10 @@ impl JetStream {
                 headers.insert(header::NATS_EXPECTED_LAST_SUBJECT_SEQUENCE, v.to_string());
             }
 
+            if let Some(v) = options.expected_last_subject_sequence_subject.as_ref() {
+                headers.insert(header::NATS_EXPECTED_LAST_SUBJECT_SEQUENCE_SUBJECT, v.to_string());
+            }
+
             Some(headers)
         } else {
             maybe_headers.cloned()

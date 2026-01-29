@@ -121,6 +121,14 @@ impl PublishMessage {
             HeaderValue::from(subject_sequence),
         )
     }
+    /// Sets the subject for the last expected stream sequence for a subject this message will be published to.
+    /// It sets the `Nats-Expected-Last-Subject-Sequence-Subject` header with provided value.
+    pub fn expected_last_subject_sequence_subject<T: AsRef<str>>(self, subject: T) -> Self {
+        self.header(
+            header::NATS_EXPECTED_LAST_SUBJECT_SEQUENCE_SUBJECT,
+            HeaderValue::from(subject.as_ref()),
+        )
+    }
     /// Sets the expected stream name.
     /// It sets the `Nats-Expected-Stream` header with provided value.
     pub fn expected_stream<T: AsRef<str>>(self, stream: T) -> Self {

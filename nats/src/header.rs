@@ -47,6 +47,9 @@ pub const NATS_EXPECTED_LAST_SEQUENCE: &str = "Nats-Expected-Last-Sequence";
 /// Nats-Expected-Last-Subject-Sequence
 pub const NATS_EXPECTED_LAST_SUBJECT_SEQUENCE: &str = "Nats-Expected-Last-Subject-Sequence";
 
+/// Nats-Expected-Last-Subject-Sequence-Subject
+pub const NATS_EXPECTED_LAST_SUBJECT_SEQUENCE_SUBJECT: &str = "Nats-Expected-Last-Subject-Sequence-Subject";
+
 /// Nats-Last-Consumer
 pub const NATS_LAST_CONSUMER: &str = "Nats-Last-Consumer";
 

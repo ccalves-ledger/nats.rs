@@ -1030,6 +1030,8 @@ pub struct PublishOptions {
     pub expected_last_sequence: Option<u64>,
     /// Expected last subject sequence
     pub expected_last_subject_sequence: Option<u64>,
+    /// Expected last subject sequence subject
+    pub expected_last_subject_sequence_subject: Option<String>,
 }
 
 /// contains info about the `JetStream` usage from the current account.
